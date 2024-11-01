@@ -18,5 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[HomeController::class,'index']);
 
 Route::get('login',[AuthController::class, 'login']);
+
 Route::get('register',[AuthController::class, 'register']);
+Route::post('register',[AuthController::class, 'create_user']);
+
 Route::get('forgot-password',[AuthController::class, 'forgotPassword']);
